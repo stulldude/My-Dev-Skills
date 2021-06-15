@@ -1,5 +1,13 @@
 <%- includes(header.ejs) %>
-
-
+    <h1>Skills Baby</h1>
+    <ul>
+        <% skills.forEach(function(s) { %>
+            <li>
+                <a href="/skills/<%= s.id %>"><%= s.id %></a>
+                 - 
+                <%= s.familiarity %>
+            </li>
+        <% }); %>
+    </ul>
 
 <%- includes(header.ejs) %>
