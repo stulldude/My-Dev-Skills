@@ -7,7 +7,8 @@ let skills = [
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    deleteOne,
 }
 
 function getOne(id) {
@@ -15,4 +16,9 @@ function getOne(id) {
 }
 function getAll(req, res) {
     return skills;
+}
+
+function deleteOne(id) {
+    let idx = getOne(id);
+    skills.splice(idx, 1)
 }
