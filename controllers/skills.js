@@ -19,10 +19,15 @@ function show(req, res) {
 }
 
 function deleteSkill(req, res) {
-    const skills = Skill.deleteOne();
+    const skills = Skill.deleteOne(req.params.id);
     res.render('skills/show', { skills })
 }
 
 function create(req, res) {
-    
+    Skill.create(req.body);
+    res.redirect('/skills')
+}
+
+function newSkill(req, res) {
+    res.render('skills/new')
 }

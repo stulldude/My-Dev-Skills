@@ -9,6 +9,11 @@ module.exports = {
     getAll,
     getOne,
     deleteOne,
+    create,
+}
+
+function create(newSkill) {
+    skills.push(newSkill);
 }
 
 function getOne(id) {
@@ -20,5 +25,5 @@ function getAll(req, res) {
 
 function deleteOne(id) {
     let idx = getOne(id);
-    skills.splice(idx, 1)
+    skills.splice(idx, 1);
 }

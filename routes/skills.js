@@ -6,8 +6,8 @@ var skillsCtrl = require('../controllers/skills');
 //GET /skills
 router.get('/', skillsCtrl.index);
 //GET /skills/:id
-router.get('/:id', skillsCtrl.show);
 router.get('/new', skillsCtrl.new);
+router.get('/:id', skillsCtrl.show);
 router.get('', skillsCtrl.create);
 router.get(':id', skillsCtrl.delete);
 
