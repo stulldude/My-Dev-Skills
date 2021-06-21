@@ -13,6 +13,7 @@ module.exports = {
 }
 
 function create(newSkill) {
+
     skills.push(newSkill);
 }
 
@@ -24,6 +25,6 @@ function getAll(req, res) {
 }
 
 function deleteOne(id) {
-    let idx = getOne(id);
-    skills.splice(idx, 1);
+    skills = skills.filter(el => el.id != id);
+    return skills;
 }

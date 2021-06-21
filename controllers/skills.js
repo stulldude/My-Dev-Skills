@@ -20,7 +20,7 @@ function show(req, res) {
 
 function deleteSkill(req, res) {
     const skills = Skill.deleteOne(req.params.id);
-    res.render('skills/show', { skills })
+    res.render('skills/index', { skills })
 }
 
 function create(req, res) {
